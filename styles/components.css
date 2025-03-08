@@ -1,0 +1,12 @@
+.NavBar {
+	padding: 5px 25px;
+	background-color: var(--navbar-color);
+	
+	h1 {
+		display: flex;
+	}
+
+	.Icon {
+		margin-right: 10px;
+	}
+}

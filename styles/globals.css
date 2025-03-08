@@ -1,12 +1,14 @@
 :root {
 	--background-color: #ededed;
 	--foreground-color: #171717;
+	--navbar-color: rgb(160, 160, 160);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: #171717;
 		--foreground-color: #ededed;
+		--navbar-color: rgb(54, 54, 54);
 	}
 }
 

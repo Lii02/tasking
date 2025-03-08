@@ -5,7 +5,7 @@ import NavBar from '@/components/NavBar';
 import { inter, spaceGrotesk, roboto } from '@/app/fonts';
 
 export const metadata: Metadata = {
-	title: 'TasKing',
+	title: 'Tasking',
 };
 
 export default function RootLayout({

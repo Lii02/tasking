@@ -1,12 +1,36 @@
 .NavBar {
-	padding: 5px 25px;
-	background-color: var(--navbar-color);
+	--button-timing: 0.2s;
 
-	h1 {
-		display: flex;
+	display: flex;
+	align-items: center;
+	padding: 25px 0px;
+	background: rgb(56, 56, 56);
+
+	* {
+		margin: 0px 10px;
 	}
 
-	.Icon {
-		margin-right: 10px;
+	a {
+		display: inline-block;
+		margin-left: 25px;
+		color: white;
+	}
+
+	h1,
+	h4 {
+		display: flex;
+		align-items: center;
+	}
+
+	.HomeButton {
+		transition: all var(--button-timing) ease;
+	}
+
+	.HomeButton:hover {
+		color: lightgray;
+	}
+
+	.LoginButton {
+		margin-left: auto;
 	}
 }

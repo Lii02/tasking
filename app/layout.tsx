@@ -3,12 +3,13 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import NavBar from '@/components/NavBar';
 import { inter, spaceGrotesk, roboto } from '@/app/fonts';
+import { GlobalStateProvider } from '@/utils/context';
 
 export const metadata: Metadata = {
 	title: 'Tasking',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
@@ -17,8 +18,10 @@ export default function RootLayout({
 		<html suppressHydrationWarning lang='en'>
 			<body
 				className={`${inter.variable} ${spaceGrotesk.variable} ${roboto.variable}`}>
-				<NavBar />
-				<ThemeProvider themes={['light', 'dark']}>{children}</ThemeProvider>
+				<GlobalStateProvider>
+					<NavBar />
+					<ThemeProvider themes={['light', 'dark']}>{children}</ThemeProvider>
+				</GlobalStateProvider>
 			</body>
 		</html>
 	);
